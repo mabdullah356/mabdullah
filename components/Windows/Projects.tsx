@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -103,6 +103,11 @@ function getProjectCategory(project: ProjectData) {
 export default function Projects() {
   const [filter, setFilter] = useState("All");
   const [activeProject, setActiveProject] = useState<ProjectData | null>(null);
+  const [detailTab, setDetailTab] = useState<"overview" | "gallery" | "tech" | "links">("overview");
+
+  useEffect(() => {
+    if (activeProject) setDetailTab("overview");
+  }, [activeProject]);
 
   const filteredProjects = useMemo(() => {
     const filtered = PROJECTS.filter((project) => {
@@ -182,9 +187,16 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
-                      View
-                    </span>
+                    <button
+                      type="button"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setActiveProject(project);
+                      }}
+                      className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 transition hover:bg-blue-600/80 hover:text-white"
+                    >
+                      Details
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -206,97 +218,145 @@ export default function Projects() {
             zIndex={999}
             isFullscreen={false}
           >
-            <div className="flex h-full flex-col bg-[#0a0a0f]">
+            <div className="flex h-full flex-col bg-[#080b12]">
               <div className="flex-1 overflow-y-auto px-6 py-6 sm:px-8 lg:px-10">
-                <div className="mx-auto flex max-w-5xl flex-col gap-8">
-                  <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6 sm:p-8">
+                <div className="mx-auto flex max-w-6xl flex-col gap-6">
+                  <div className="rounded-[2rem] border border-white/10 bg-[#10131d] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.3)] sm:p-8">
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                       <div className="max-w-2xl">
                         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">{activeProject.category}</p>
                         <h2 className="text-3xl font-semibold text-white sm:text-4xl">{activeProject.title}</h2>
-                        <p className="mt-4 text-base leading-relaxed text-white/65">{activeProject.description}</p>
+                        <p className="mt-4 text-base leading-relaxed text-zinc-300">{activeProject.description}</p>
                       </div>
-                      <div className="rounded-2xl border border-blue-400/20 bg-blue-500/10 px-4 py-3 text-sm text-blue-300">
+                      <div className="rounded-2xl border border-blue-400/20 bg-blue-500/10 px-4 py-3 text-sm text-blue-200">
                         <p className="font-semibold">Role</p>
-                        <p className="mt-1 text-white/80">{activeProject.role}</p>
+                        <p className="mt-1 text-white">{activeProject.role}</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
-                    <div className="space-y-6">
-                      <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/3">
-                        <Image src={activeProject.images[0] ?? activeProject.thumbnail} alt={activeProject.title} width={1200} height={720} unoptimized className="h-72 w-full object-cover" />
-                      </div>
+                  <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#10131d]">
+                    <Image src={activeProject.images[0] ?? activeProject.thumbnail} alt={activeProject.title} width={1600} height={900} unoptimized className="h-72 w-full object-cover sm:h-80" />
+                  </div>
 
-                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
-                        <div className="mb-5 flex items-center gap-3">
-                          <div className="h-2 w-2 rounded-full bg-blue-500" />
-                          <h3 className="text-xl font-semibold text-white">Project Overview</h3>
+                  <div className="mt-4 flex w-full items-center gap-3">
+                    <button
+                      onClick={() => setDetailTab("overview")}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold ${detailTab === "overview" ? "bg-blue-600 text-white" : "bg-white/5 text-white/70"}`}
+                    >
+                      Overview
+                    </button>
+                    <button
+                      onClick={() => setDetailTab("gallery")}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold ${detailTab === "gallery" ? "bg-blue-600 text-white" : "bg-white/5 text-white/70"}`}
+                    >
+                      Gallery
+                    </button>
+                    <button
+                      onClick={() => setDetailTab("tech")}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold ${detailTab === "tech" ? "bg-blue-600 text-white" : "bg-white/5 text-white/70"}`}
+                    >
+                      Tech
+                    </button>
+                    <button
+                      onClick={() => setDetailTab("links")}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold ${detailTab === "links" ? "bg-blue-600 text-white" : "bg-white/5 text-white/70"}`}
+                    >
+                      Links
+                    </button>
+                  </div>
+
+                  <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+                    <div className="space-y-6">
+                      {detailTab === "overview" && (
+                        <div className="rounded-[2rem] border border-white/10 bg-[#10131d] p-6">
+                          <div className="mb-5 flex items-center gap-3">
+                            <div className="h-2.5 w-2.5 rounded-full bg-blue-500" />
+                            <h3 className="text-xl font-semibold text-white">Project Overview</h3>
+                          </div>
+                          <p className="text-base leading-relaxed text-zinc-300">{activeProject.description}</p>
+                          {activeProject.ui_features && activeProject.ui_features.length > 0 && (
+                            <ul className="mt-6 space-y-3">
+                              {activeProject.ui_features.map((feature) => (
+                                <li key={feature} className="flex items-start gap-3 text-sm text-zinc-300">
+                                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-blue-500" />
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
-                        <p className="text-base leading-relaxed text-white/65">{activeProject.description}</p>
-                        {activeProject.ui_features && activeProject.ui_features.length > 0 && (
-                          <ul className="mt-6 space-y-3">
-                            {activeProject.ui_features.map((feature) => (
-                              <li key={feature} className="flex items-start gap-3 text-sm text-white/70">
-                                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-blue-500" />
-                                <span>{feature}</span>
-                              </li>
+                      )}
+
+                      {detailTab === "gallery" && (
+                        <div className="rounded-[2rem] border border-white/10 bg-[#10131d] p-6">
+                          <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-zinc-300">Gallery</h3>
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            {activeProject.images.map((image, index) => (
+                              <div key={image + index} className="overflow-hidden rounded-2xl border border-white/10">
+                                <Image src={image} alt={`${activeProject.title} preview ${index + 1}`} width={800} height={500} unoptimized className="h-36 w-full object-cover" />
+                              </div>
                             ))}
-                          </ul>
-                        )}
-                      </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     <div className="space-y-6">
-                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
-                        <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-white/70">Tech Stack</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {[
-                            ...activeProject.tech.frontend,
-                            ...activeProject.tech.backend,
-                            ...activeProject.tech.services,
-                          ].map((tool) => (
-                            <span key={tool} className="rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-300">
-                              {tool}
-                            </span>
-                          ))}
+                      {(detailTab === "overview" || detailTab === "tech") && (
+                        <div className="rounded-[2rem] border border-white/10 bg-[#10131d] p-6">
+                          <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-zinc-300">Tech Stack</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              ...activeProject.tech.frontend,
+                              ...activeProject.tech.backend,
+                              ...activeProject.tech.services,
+                            ].map((tool) => (
+                              <span key={tool} className="rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-200">
+                                {tool}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                      </div>
+                      )}
 
-                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
-                        <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-white/70">Project Links</h3>
-                        <div className="space-y-3">
-                          <a href={activeProject.links.github} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80 transition hover:bg-white/10">
-                            <span className="flex items-center gap-2"><Github className="h-4 w-4" /> GitHub</span>
-                            <ExternalLink className="h-4 w-4 text-white/40" />
-                          </a>
-                          {activeProject.links.live ? (
-                            <a href={activeProject.links.live} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-blue-600/20 px-4 py-3 text-sm text-blue-300 transition hover:bg-blue-600/30">
-                              <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Live Demo</span>
-                              <ExternalLink className="h-4 w-4 text-blue-300" />
+                      {(detailTab === "overview" || detailTab === "links" || detailTab === "gallery") && (
+                        <div className="rounded-[2rem] border border-white/10 bg-[#10131d] p-6">
+                          <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-zinc-300">Project Links</h3>
+                          <div className="space-y-3">
+                            <a href={activeProject.links.github} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10">
+                              <span className="flex items-center gap-2"><Github className="h-4 w-4" /> GitHub</span>
+                              <ExternalLink className="h-4 w-4 text-white/60" />
                             </a>
-                          ) : null}
+                            {activeProject.links.live ? (
+                              <a href={activeProject.links.live} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-blue-400/20 bg-blue-600/15 px-4 py-3 text-sm text-blue-200 transition hover:bg-blue-600/25">
+                                <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Live Demo</span>
+                                <ExternalLink className="h-4 w-4 text-blue-200" />
+                              </a>
+                            ) : null}
+                          </div>
                         </div>
-                      </div>
+                      )}
 
-                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
-                        <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-white/70">Quick Highlights</h3>
-                        <div className="space-y-3 text-sm text-white/70">
-                          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
-                            <span>Type</span>
-                            <span className="text-white/85">{activeProject.type}</span>
-                          </div>
-                          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
-                            <span>Role</span>
-                            <span className="text-white/85">{activeProject.role}</span>
-                          </div>
-                          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
-                            <span>Stack</span>
-                            <span className="text-white/85">{activeProject.techStack.join(", ")}</span>
+                      {(detailTab === "overview" || detailTab === "gallery") && (
+                        <div className="rounded-[2rem] border border-white/10 bg-[#10131d] p-6">
+                          <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-zinc-300">Quick Details</h3>
+                          <div className="space-y-3 text-sm text-zinc-300">
+                            <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
+                              <span>Type</span>
+                              <span className="text-white">{activeProject.type}</span>
+                            </div>
+                            <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
+                              <span>Role</span>
+                              <span className="text-white">{activeProject.role}</span>
+                            </div>
+                            <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
+                              <span>Stack</span>
+                              <span className="text-white">{activeProject.techStack.join(", ")}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>
