@@ -83,7 +83,7 @@ export default function ContactMe() {
           </div>
 
           <div className="flex gap-3 pt-6">
-            <a href="https://github.com/muhammad-abdullah11" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all hover:-translate-y-1">
+            <a href="https://github.com/mabdullah356" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all hover:-translate-y-1">
               <Github size={18} />
             </a>
             <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all hover:-translate-y-1">

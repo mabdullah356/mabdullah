@@ -36,7 +36,7 @@ The portfolio adapts its behavior based on your device:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/muhammad-abdullah11/mabdullah.git
+   git clone https://github.com/mabdullah356/mabdullah.git
    cd mabdullah
    ```
 
@@ -57,4 +57,4 @@ The portfolio adapts its behavior based on your device:
 
 ---
 
-Built with ❤️ by [Muhammad Abdullah](https://github.com/muhammad-abdullah11)
+Built with ❤️ by [Muhammad Abdullah](https://github.com/mabdullah356)

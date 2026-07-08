@@ -81,7 +81,7 @@ export default function AboutMe() {
 
             <div className="flex gap-4 justify-center md:justify-start">
               {[
-                { icon: <Github size={20} />, href: "https://github.com/muhammad-abdullah11", label: "GitHub" },
+                { icon: <Github size={20} />, href: "https://github.com/mabdullah356", label: "GitHub" },
                 { icon: <Linkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
                 { icon: <Twitter size={20} />, href: "https://twitter.com", label: "Twitter" },
               ].map((s, i) => (
