@@ -1,251 +1,204 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Utensils, Users, GraduationCap, Car, Home, BookOpen, Link2, Music, Gamepad, ShoppingBag, Package, Smartphone, ShieldCheck, Zap } from "lucide-react";
+import {
+  Github,
+  ExternalLink,
+  Utensils,
+  Users,
+  GraduationCap,
+  Car,
+  Home,
+  BookOpen,
+  Link2,
+  Music,
+  Gamepad,
+  ShoppingBag,
+  Package,
+  Smartphone,
+  Monitor,
+  MessageSquare,
+  Shield,
+  Wallet,
+  Instagram,
+  Book,
+  Grid,
+  FolderCode,
+} from "lucide-react";
+import projectsData from "@/public/projects.json";
 import WindowWrapper from "./WindowWrapper";
 
-const PROJECTS = [
-  {
-    id: "01",
-    title: "PakBites - Food Hub",
-    description: "Production-grade MERN platform for restaurant operations with real-time menu management.",
-    tech: ["React 19", "Node.js", "MongoDB", "Cloudinary"],
-    github: "https://github.com/muhammad-abdullah11/pakBites",
-    live: "#",
-    icon: <Utensils className="w-6 h-6" />,
-    size: "col-span-2 row-span-2",
-    role: "Lead Full Stack Developer",
-    features: ["Dark-mode aesthetic", "Liquid transitions", "Admin analytics dashboard", "Stripe Integration"],
-    details: "PakBites is a full-stack food ordering platform designed for high-traffic operations. It features a vibrant dark-mode aesthetic, liquid transitions, and interactive admin analytics dashboards.",
-  },
-  {
-    id: "02",
-    title: "Facebook Lite",
-    description: "High-performance networking platform with media streaming engines and real-time notifications.",
-    tech: ["React 19", "Express.js", "Cloudinary", "JWT"],
-    github: "https://github.com/muhammad-abdullah11/facebook",
-    live: "#",
-    icon: <Users className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Full Stack Architect",
-    features: ["Mobile transitions for Reels", "Auditory feedback", "Auto-play engine", "OTP Verification"],
-    details: "A sophisticated social platform optimized for speed. Includes native-feeling mobile transitions for Reels and Stories, and auditory feedback on interactions.",
-  },
-  {
-    id: "03",
-    title: "Scholarly LMS",
-    description: "Enterprise education system handling multi-role hierarchies and real-time messaging.",
-    tech: ["React", "Socket.io", "Ant Design", "MongoDB"],
-    github: "https://github.com/muhammad-abdullah11/NUML-LMS",
-    live: "#",
-    icon: <GraduationCap className="w-6 h-6" />,
-    size: "col-span-1 row-span-2",
-    role: "System Architect",
-    features: ["Multi-role hierarchies", "Real-time messaging", "Progress charts", "RBAC Security"],
-    details: "Digitizes the academic workflow with professional dashboard layouts, live notification streams, and complex data tracking for institutions.",
-  },
-  {
-    id: "04",
-    title: "Uber Mobility Clone",
-    description: "Ride-hailing app with real-time mapping and fare calculation algorithms.",
-    tech: ["React", "Google Maps", "Socket.io", "Node.js"],
-    github: "https://github.com/muhammad-abdullah11/uber",
-    live: "#",
-    icon: <Car className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Full Stack Engineer",
-    features: ["Vehicle movement simulation", "Fare estimation UI", "Predictive input", "Captain matching"],
-    details: "Integrates real-time vehicle movement simulation, floating search bars, and dynamic price estimation UI.",
-  },
-  {
-    id: "05",
-    title: "Airbnb Rental Hub",
-    description: "Travel marketplace with booking calendars and host toolkits.",
-    tech: ["React", "Stripe", "Cloudinary", "Mongoose"],
-    github: "https://github.com/muhammad-abdullah11/Airbnb",
-    live: "#",
-    icon: <Home className="w-6 h-6" />,
-    size: "col-span-2 row-span-1",
-    role: "Full Stack Developer",
-    features: ["Multi-image carousels", "Amenity filtering", "Interactive maps", "Booking engine"],
-    details: "Features modern card layouts with multi-image carousels, advanced filtering, and interactive property maps following Airbnb's design system.",
-  },
-  {
-    id: "06",
-    title: "Ademy - E-Learning",
-    description: "Premium course marketplace with secure payments and progress tracking.",
-    tech: ["React 19", "Stripe", "Vite", "OAuth"],
-    github: "https://github.com/muhammad-abdullah11/Ademy",
-    live: "#",
-    icon: <BookOpen className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Lead Developer",
-    features: ["Seamless video player", "Fluid checkout", "Course discovery", "Instructor dashboard"],
-    details: "Bridge for instructors and students featuring seamless video playback, fluid checkout animations, and optimized discovery interfaces.",
-  },
-  {
-    id: "07",
-    title: "MiniURL Analytics",
-    description: "Link shortening utility with advanced visitor tracking and QR codes.",
-    tech: ["Node.js", "MongoDB", "Express", "QR Engine"],
-    github: "https://github.com/muhammad-abdullah11/URL-Shortener",
-    live: "#",
-    icon: <Link2 className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Backend Developer",
-    features: ["QR Code generation", "Click tracking", "Custom aliases", "Minimalist input"],
-    details: "A high-performance utility tool for creating short links with detailed analytics on clicks, geography, and referral sources.",
-  },
-  {
-    id: "08",
-    title: "The Rhythm Room",
-    description: "Music course platform featuring event galleries and mobile-first design.",
-    tech: ["Next.js", "React", "Tailwind", "shadcn/ui"],
-    github: "https://github.com/muhammad-abdullah11/the-rhythm-room",
-    live: "https://the-rhythm-room.vercel.app",
-    icon: <Music className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Full Stack Engineer",
-    features: ["Music course listings", "Event galleries", "Static/Dynamic pages", "Mobile-first"],
-    details: "A Next.js site for music courses, events, blogs and galleries. Built with a mobile-first responsive design and server-rendered pages.",
-  },
-  {
-    id: "09",
-    title: "Quizee",
-    description: "Interactive flashcard and study app inspired by Quizlet.",
-    tech: ["React", "Vite", "Tailwind", "React Router"],
-    github: "https://github.com/muhammad-abdullah11/quieee",
-    live: "https://quizee-kappa.vercel.app/",
-    icon: <GraduationCap className="w-6 h-6 text-yellow-400" />,
-    size: "col-span-1 row-span-1",
-    role: "Full Stack Engineer",
-    features: ["Interactive flashcards", "Dynamic carousels", "Study sets", "Smooth transitions"],
-    details: "Helping students master any subject through beautifully designed flashcards and an intuitive learning experience.",
-  },
-  {
-    id: "10",
-    title: "Pookie Games",
-    description: "Modern mini-games hub with a sleek Bento-style dashboard.",
-    tech: ["React 19", "Vite 7", "Tailwind v4"],
-    github: "https://github.com/muhammad-abdullah11/pookie-games",
-    live: "https://pookie-games-11.vercel.app/",
-    icon: <Gamepad className="w-6 h-6" />,
-    size: "col-span-2 row-span-1",
-    role: "Frontend Engineer",
-    features: ["Bento dashboard", "Dynamic game loading", "Classic arcade games", "Mobile optimized"],
-    details: "High-performance mini-games hub featuring classic arcade and logic games with a seamless user experience.",
-  },
-  {
-    id: "11",
-    title: "shopyee",
-    description: "Fashion e-commerce merged with curated global travel guides.",
-    tech: ["React 19", "Vite 8", "Countries API"],
-    github: "https://github.com/muhammad-abdullah11/shopyee",
-    live: "https://shopyee.vercel.app/",
-    icon: <ShoppingBag className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Full Stack Engineer",
-    features: ["Editorial interface", "Travel discovery", "REST API integration", "Fluid design"],
-    details: "Merging modern fashion e-commerce with curated travel and lifestyle guides through an editorial-style interface.",
-  },
-  {
-    id: "12",
-    title: "Inventory-MS",
-    description: "Enterprise-grade inventory tracking for business efficiency.",
-    tech: ["React 18", "LocalStorage", "CSV Export"],
-    github: "https://github.com/muhammad-abdullah11/inventory-management-system",
-    live: "https://inventroo.vercel.app/",
-    icon: <Package className="w-6 h-6" />,
-    size: "col-span-1 row-span-1",
-    role: "Frontend Engineer",
-    features: ["Real-time metrics", "Transaction logging", "CSV utility", "Zero backend dependency"],
-    details: "Professional-grade tracking with a high-performance dashboard and full life-cycle management.",
-  },
-];
+interface ProjectData {
+  id: string;
+  title: string;
+  category: string;
+  type: string;
+  icon: string;
+  thumbnail: string;
+  images: string[];
+  description: string;
+  role: string;
+  tech: {
+    frontend: string[];
+    backend: string[];
+    services: string[];
+  };
+  tags: string[];
+  techStack: string[];
+  links: {
+    github: string;
+    live: string;
+  };
+  ui_features?: string[];
+  online_resources?: {
+    documentation?: string;
+    api_docs?: string;
+  };
+}
 
-const FILTERS = ["All", "React", "Node.js", "Next.js", "MERN", "TypeScript"];
+const PROJECTS = projectsData as ProjectData[];
+const FILTERS = ["All", "MERN", "Next.js", "React"];
+
+const ICON_MAP: Record<string, typeof Utensils> = {
+  Utensils,
+  Users,
+  GraduationCap,
+  Car,
+  Home,
+  BookOpen,
+  Link: Link2,
+  Music,
+  Gamepad,
+  ShoppingBag,
+  Package,
+  Smartphone,
+  Shield,
+  Wallet,
+  Instagram,
+  Book,
+  Grid,
+  Monitor,
+  MessageSquare,
+  Github,
+  FolderCode,
+};
+
+const CATEGORY_ORDER: Record<string, number> = {
+  MERN: 0,
+  "Next.js": 1,
+  React: 2,
+  Other: 3,
+};
+
+function getProjectCategory(project: ProjectData) {
+  const stackText = [project.techStack.join(" "), ...project.tech.frontend, ...project.tech.backend, ...project.tech.services].join(" ").toLowerCase();
+
+  if (stackText.includes("next")) return "Next.js";
+  if (stackText.includes("mern")) return "MERN";
+  if (stackText.includes("react")) return "React";
+  return "Other";
+}
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
-  const [activeProject, setActiveProject] = useState<string | null>(null);
+  const [activeProject, setActiveProject] = useState<ProjectData | null>(null);
 
-  const filtered = PROJECTS.filter((p) => 
-    filter === "All" || p.tech.some(t => t.includes(filter))
-  );
-  const activeProjectData = PROJECTS.find((p) => p.id === activeProject);
+  const filteredProjects = useMemo(() => {
+    const filtered = PROJECTS.filter((project) => {
+      if (filter === "All") return true;
+      return getProjectCategory(project) === filter;
+    });
+
+    return filtered.sort((a, b) => {
+      const aCategory = getProjectCategory(a);
+      const bCategory = getProjectCategory(b);
+      const diff = (CATEGORY_ORDER[aCategory] ?? 99) - (CATEGORY_ORDER[bCategory] ?? 99);
+
+      if (diff !== 0) return diff;
+      return a.title.localeCompare(b.title);
+    });
+  }, [filter]);
 
   return (
     <div className="relative w-full h-full p-6 overflow-y-auto bg-[#0a0a0f]">
       <div className="max-w-6xl mx-auto pb-20">
-        <div className="flex flex-wrap gap-2 mb-12 justify-center">
-          {FILTERS.map((f) => (
+        <div className="flex flex-wrap gap-2 mb-8 justify-center">
+          {FILTERS.map((item) => (
             <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={`px-6 py-2 rounded-xl text-sm font-semibold transition-all border ${
-                filter === f
+              key={item}
+              onClick={() => setFilter(item)}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all border ${
+                filter === item
                   ? "bg-blue-600 text-white border-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.3)]"
-                  : "bg-white/5 text-white/50 border-white/5 hover:bg-white/10 hover:text-white"
+                  : "bg-white/5 text-white/60 border-white/10 hover:bg-white/10 hover:text-white"
               }`}
             >
-              {f}
+              {item}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
-          {filtered.map((project) => (
-            <motion.div
-              key={project.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -5 }}
-              className={`group relative rounded-[2rem] p-8 border border-white/10 flex flex-col justify-between overflow-hidden cursor-pointer bg-[#151520] transition-all hover:border-blue-500/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] ${project.size}`}
-              onClick={() => setActiveProject(project.id)}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-xl">
-                  {project.icon}
-                </div>
-                <h3 className="text-white font-bold text-2xl mb-3 group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-white/50 text-sm line-clamp-2 leading-relaxed font-medium">
-                  {project.description}
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 auto-rows-[240px]">
+          {filteredProjects.map((project, index) => {
+            const Icon = ICON_MAP[project.icon] ?? FolderCode;
+            const cardSpan = index % 5 === 0 ? "md:col-span-2 md:row-span-2" : index % 3 === 1 ? "md:col-span-2" : "";
 
-              <div className="relative z-10 flex items-center justify-between mt-auto">
-                <div className="flex -space-x-3">
-                  {project.tech.slice(0, 3).map((t, i) => (
-                    <div key={i} className="w-9 h-9 rounded-full bg-[#1c1c2b] border-2 border-[#151520] flex items-center justify-center text-[9px] font-bold text-white/80 uppercase tracking-tighter">
-                      {t.charAt(0)}
+            return (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -6, scale: 1.01 }}
+                className={`group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#151520] cursor-pointer shadow-[0_16px_40px_rgba(0,0,0,0.28)] ${cardSpan}`}
+                onClick={() => setActiveProject(project)}
+              >
+                <Image src={project.thumbnail} alt={project.title} fill unoptimized className="absolute inset-0 h-full w-full object-cover opacity-35 group-hover:opacity-50 transition-all duration-500" />
+                <div className="absolute inset-0 bg-linear-to-br from-[#0b1020]/90 via-[#0f1322]/60 to-[#05070c]/90" />
+                <div className="relative z-10 flex h-full flex-col justify-between p-6">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="rounded-2xl border border-white/10 bg-white/10 p-3 text-blue-400 backdrop-blur-sm">
+                      <Icon className="h-6 w-6" />
                     </div>
-                  ))}
-                  {project.tech.length > 3 && (
-                    <div className="w-9 h-9 rounded-full bg-[#1c1c2b] border-2 border-[#151520] flex items-center justify-center text-[9px] font-bold text-blue-400">
-                      +{project.tech.length - 3}
+                    <span className="rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-blue-300">
+                      {getProjectCategory(project)}
+                    </span>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-sm text-white/45">{project.category}</p>
+                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-white/60 line-clamp-3">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.slice(0, 2).map((tech) => (
+                        <span key={tech} className="rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
-                  )}
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
+                      View
+                    </span>
+                  </div>
                 </div>
-                <div className="px-4 py-1.5 rounded-full bg-white/5 text-white/30 text-[10px] uppercase font-bold tracking-widest group-hover:bg-blue-600 group-hover:text-white transition-all">
-                  Details
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
       <AnimatePresence>
-        {activeProjectData && (
+        {activeProject && (
           <WindowWrapper
-            id={`proj-${activeProjectData.id}`}
-            title={activeProjectData.title}
-            icon="📂"
+            id="projects"
+            title={activeProject.title}
+            icon={<FolderCode className="h-4 w-4" />}
             onClose={() => setActiveProject(null)}
             onMinimize={() => {}}
             onFocus={() => {}}
@@ -253,91 +206,100 @@ export default function Projects() {
             zIndex={999}
             isFullscreen={false}
           >
-            <div className="flex flex-col h-full bg-[#0a0a0f]">
-              <div className="flex-1 overflow-y-auto custom-scrollbar">
-                <div className="p-10 max-w-4xl mx-auto">
-                  <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-                     <div className="w-24 h-24 rounded-3xl bg-blue-600 flex items-center justify-center text-white text-4xl shadow-2xl">
-                        {activeProjectData.icon}
-                     </div>
-                     <div className="text-center md:text-left">
-                        <h2 className="text-4xl font-bold text-white mb-2">{activeProjectData.title}</h2>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                           <span className="flex items-center gap-2 text-blue-400 font-mono text-sm">
-                             <ShieldCheck size={16} /> {activeProjectData.role}
-                           </span>
-                           <span className="flex items-center gap-2 text-white/30 font-mono text-sm">
-                             <Zap size={16} /> Full-Stack Architecture
-                           </span>
-                        </div>
-                     </div>
+            <div className="flex h-full flex-col bg-[#0a0a0f]">
+              <div className="flex-1 overflow-y-auto px-6 py-6 sm:px-8 lg:px-10">
+                <div className="mx-auto flex max-w-5xl flex-col gap-8">
+                  <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6 sm:p-8">
+                    <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                      <div className="max-w-2xl">
+                        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">{activeProject.category}</p>
+                        <h2 className="text-3xl font-semibold text-white sm:text-4xl">{activeProject.title}</h2>
+                        <p className="mt-4 text-base leading-relaxed text-white/65">{activeProject.description}</p>
+                      </div>
+                      <div className="rounded-2xl border border-blue-400/20 bg-blue-500/10 px-4 py-3 text-sm text-blue-300">
+                        <p className="font-semibold">Role</p>
+                        <p className="mt-1 text-white/80">{activeProject.role}</p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                     <div className="md:col-span-2 space-y-8">
-                        <div className="w-full aspect-video bg-white/5 border border-white/10 rounded-[2.5rem] relative overflow-hidden group">
-                           <img 
-                              src={`https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80`} 
-                              alt="Mockup" 
-                              className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-                           />
-                           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent" />
-                           <div className="absolute bottom-8 left-8 right-8">
-                              <p className="text-white font-bold text-lg mb-1 tracking-tight">Project Visual Showcase</p>
-                              <div className="flex gap-2">
-                                 {[1,2,3].map(i => <div key={i} className={`w-2 h-2 rounded-full ${i===1 ? 'bg-blue-500' : 'bg-white/20'}`} />)}
-                              </div>
-                           </div>
-                        </div>
+                  <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+                    <div className="space-y-6">
+                      <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/3">
+                        <Image src={activeProject.images[0] ?? activeProject.thumbnail} alt={activeProject.title} width={1200} height={720} unoptimized className="h-72 w-full object-cover" />
+                      </div>
 
-                        <div>
-                           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                              <div className="w-1 h-6 bg-blue-600 rounded-full" />
-                              Project Overview
-                           </h3>
-                           <p className="text-white/60 text-lg leading-relaxed">
-                              {activeProjectData.details}
-                           </p>
+                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
+                        <div className="mb-5 flex items-center gap-3">
+                          <div className="h-2 w-2 rounded-full bg-blue-500" />
+                          <h3 className="text-xl font-semibold text-white">Project Overview</h3>
                         </div>
-                     </div>
+                        <p className="text-base leading-relaxed text-white/65">{activeProject.description}</p>
+                        {activeProject.ui_features && activeProject.ui_features.length > 0 && (
+                          <ul className="mt-6 space-y-3">
+                            {activeProject.ui_features.map((feature) => (
+                              <li key={feature} className="flex items-start gap-3 text-sm text-white/70">
+                                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-blue-500" />
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
 
-                     <div className="space-y-8">
-                        <div className="p-8 rounded-[2rem] bg-white/[0.03] border border-white/10">
-                           <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Key Features</h4>
-                           <ul className="space-y-4">
-                              {activeProjectData.features?.map((f, i) => (
-                                 <li key={i} className="flex items-start gap-3 text-white/60 text-sm">
-                                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                                    {f}
-                                 </li>
-                              ))}
-                           </ul>
+                    <div className="space-y-6">
+                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
+                        <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-white/70">Tech Stack</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            ...activeProject.tech.frontend,
+                            ...activeProject.tech.backend,
+                            ...activeProject.tech.services,
+                          ].map((tool) => (
+                            <span key={tool} className="rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-300">
+                              {tool}
+                            </span>
+                          ))}
                         </div>
+                      </div>
 
-                        <div className="p-8 rounded-[2rem] bg-white/[0.03] border border-white/10">
-                           <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Tech Stack</h4>
-                           <div className="flex flex-wrap gap-2">
-                              {activeProjectData.tech.map((t) => (
-                                 <span key={t} className="px-3 py-1.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[10px] font-bold uppercase">
-                                    {t}
-                                 </span>
-                              ))}
-                           </div>
+                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
+                        <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-white/70">Project Links</h3>
+                        <div className="space-y-3">
+                          <a href={activeProject.links.github} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80 transition hover:bg-white/10">
+                            <span className="flex items-center gap-2"><Github className="h-4 w-4" /> GitHub</span>
+                            <ExternalLink className="h-4 w-4 text-white/40" />
+                          </a>
+                          {activeProject.links.live ? (
+                            <a href={activeProject.links.live} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-blue-600/20 px-4 py-3 text-sm text-blue-300 transition hover:bg-blue-600/30">
+                              <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Live Demo</span>
+                              <ExternalLink className="h-4 w-4 text-blue-300" />
+                            </a>
+                          ) : null}
                         </div>
-                     </div>
+                      </div>
+
+                      <div className="rounded-[2rem] border border-white/10 bg-white/3 p-6">
+                        <h3 className="mb-5 text-lg font-semibold uppercase tracking-[0.25em] text-white/70">Quick Highlights</h3>
+                        <div className="space-y-3 text-sm text-white/70">
+                          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
+                            <span>Type</span>
+                            <span className="text-white/85">{activeProject.type}</span>
+                          </div>
+                          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
+                            <span>Role</span>
+                            <span className="text-white/85">{activeProject.role}</span>
+                          </div>
+                          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-3 py-2">
+                            <span>Stack</span>
+                            <span className="text-white/85">{activeProject.techStack.join(", ")}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="p-6 border-t border-white/10 bg-[#0a0a0f]/80 backdrop-blur-xl">
-                 <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-4">
-                    <a href={activeProjectData.github} target="_blank" className="flex-1 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center gap-2 text-white font-bold transition-all">
-                       <Github size={20} /> View Source Code
-                    </a>
-                    <a href={activeProjectData.live} target="_blank" className="flex-1 py-4 bg-blue-600 hover:bg-blue-700 rounded-2xl flex items-center justify-center gap-2 text-white font-bold transition-all shadow-xl shadow-blue-600/20">
-                       <ExternalLink size={20} /> Launch Live Site
-                    </a>
-                 </div>
               </div>
             </div>
           </WindowWrapper>

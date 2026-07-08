@@ -1,0 +1,1307 @@
+[
+    {
+        "id": "01",
+        "title": "PakBites - Premium Food Hub",
+        "category": "E-Commerce / Food Tech",
+        "type": "MERN Stack Application",
+        "icon": "Utensils",
+        "thumbnail": "https://images.unsplash.com/photo-1598298125619-ac63f5c89d90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb2QlMjB3ZWJzaXRlJTIwdGh1bWJuYWlsfGVufDB8fDB8fHww",
+        "images": [
+            "https://res.cloudinary.com/demo/image/upload/v1/pakbites/home.png",
+            "https://res.cloudinary.com/demo/image/upload/v2/pakbites/menu.png",
+            "https://res.cloudinary.com/demo/image/upload/v3/pakbites/cart.png",
+            "https://res.cloudinary.com/demo/image/upload/v4/pakbites/checkout.png",
+            "https://res.cloudinary.com/demo/image/upload/v5/pakbites/admin-dash.png",
+            "https://res.cloudinary.com/demo/image/upload/v6/pakbites/analytics.png",
+            "https://res.cloudinary.com/demo/image/upload/v7/pakbites/mobile-view.png"
+        ],
+        "description": "PakBites is a production-grade, full-stack food ordering platform designed for high-traffic restaurant operations. It solves the complexity of real-time menu management and secure transaction processing with a focus on premium aesthetics and performance.",
+        "role": "Lead Full Stack Developer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS 4",
+                "Framer Motion",
+                "React Router 7"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Mongoose"
+            ],
+            "services": [
+                "Cloudinary (Media)",
+                "Nodemailer (OTP Service)",
+                "JWT (Auth)",
+                "Bcrypt (Security)"
+            ]
+        },
+        "tags": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Tailwind"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/pakBites",
+            "live": ""
+        },
+        "ui_features": [
+            "Vibrant dark-mode-first aesthetic with glassmorphism effects",
+            "Liquid transitions using Framer Motion",
+            "Fully responsive architecture for mobile and desktop",
+            "Interactive data visualizations for admin analytics"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/pakbites/blob/main/README.md",
+            "api_docs": "https://documenter.getpostman.com/view/pakbites"
+        }
+    },
+    {
+        "id": "02",
+        "title": "Facebook Lite - Social Hub",
+        "category": "Social Media / Networking",
+        "type": "Real-time Web App",
+        "icon": "Users",
+        "thumbnail": "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZWJvb2t8ZW58MHx8MHx8fDA%3D",
+        "images": [
+            "https://res.cloudinary.com/demo/image/upload/v1/fb/feed.png",
+            "https://res.cloudinary.com/demo/image/upload/v2/fb/reels.png",
+            "https://res.cloudinary.com/demo/image/upload/v3/fb/stories.png",
+            "https://res.cloudinary.com/demo/image/upload/v4/fb/marketplace.png",
+            "https://res.cloudinary.com/demo/image/upload/v5/fb/profile.png",
+            "https://res.cloudinary.com/demo/image/upload/v6/fb/comments.png",
+            "https://res.cloudinary.com/demo/image/upload/v7/fb/search.png"
+        ],
+        "description": "A high-performance social networking platform optimized for speed and engagement. It features an advanced media streaming engine for Reels and a real-time notification system, mimicking the core experiences of modern social giants.",
+        "role": "Full Stack Architect",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Tailwind CSS 4",
+                "Framer Motion",
+                "Axios"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js (v5)",
+                "MongoDB",
+                "Multer"
+            ],
+            "services": [
+                "Cloudinary (Video Streaming)",
+                "JWT Authentication",
+                "Nodemailer (OTP Verified)"
+            ]
+        },
+        "tags": [
+            "React",
+            "Framer Motion",
+            "Cloudinary",
+            "Node.js"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/facebook",
+            "live": ""
+        },
+        "ui_features": [
+            "Native-feeling mobile transitions for Reels and Stories",
+            "Auditory feedback on social interactions (likes/comments)",
+            "Intersection-aware auto-play engine for video content",
+            "Dynamic aspect-ratio enforcement for visual stability"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/facebook-lite/blob/main/README.md"
+        }
+    },
+    {
+        "id": "03",
+        "title": "Scholarly - Learning System",
+        "category": "EdTech / Management",
+        "type": "Enterprise SaaS",
+        "icon": "GraduationCap",
+        "thumbnail": "https://media.istockphoto.com/id/498445859/photo/learning-management-system.webp?a=1&b=1&s=612x612&w=0&k=20&c=j5L314xGY2N5rii1BfpMbe9tp9XYdhejnfzj92CdVF8=",
+        "images": [
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824761/uploads_folder/Capture_cqvdqi.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824765/uploads_folder/Capture1_ya0r0f.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture10_ae5u7g.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824760/uploads_folder/Capture11_uasdr0.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824759/uploads_folder/Capture12_tetciy.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture13_yagxxm.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture14_cgfifw.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture15_jsw2ik.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture16_wxxeec.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture17_irybyr.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture18_phsoij.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824755/uploads_folder/Capture19_xv123g.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture2_kwtw6m.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture20_rsewlo.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture21_pmtswr.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824767/uploads_folder/Capture22_njqwbq.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824770/uploads_folder/Capture23_idpf4t.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824756/uploads_folder/Capture24_minzg9.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824756/uploads_folder/Capture25_sfbzmk.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824782/uploads_folder/Capture26_yhv4go.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture27_bt0ykc.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824753/uploads_folder/Capture3_mx5ebj.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824757/uploads_folder/Capture4_hly0lx.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824762/uploads_folder/Capture5_jwhzxc.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824778/uploads_folder/Capture6_aoxarm.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824755/uploads_folder/Capture7_xfceot.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824754/uploads_folder/Capture8_e5nq72.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770824756/uploads_folder/Capture9_cbxexk.png"
+        ],
+        "description": "Scholarly LMS is an enterprise-grade education management platform that digitizes the entire academic workflow. It handles multi-role hierarchies, real-time messaging, and comprehensive data tracking for modern educational institutions.",
+        "role": "System Architect & Dev",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Ant Design",
+                "Tailwind CSS 4",
+                "Context API"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Socket.io"
+            ],
+            "services": [
+                "Cloudinary (Asset Hosting)",
+                "JWT RBAC (Role Based Access Control)"
+            ]
+        },
+        "tags": [
+            "React 19",
+            "Socket.io",
+            "Ant Design",
+            "MongoDB"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/NUML-LMS",
+            "live": ""
+        },
+        "ui_features": [
+            "Professional dashboard layouts using Ant Design components",
+            "Real-time live notification stream using WebSockets",
+            "Complex form handling for course and user creation",
+            "Interactive academic progress charts"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/lms-system/blob/main/README.md"
+        }
+    },
+    {
+        "id": "04",
+        "title": "Uber Mobility Clone",
+        "category": "Mobility / Logistics",
+        "type": "Real-time Service",
+        "icon": "Car",
+        "thumbnail": "https://images.unsplash.com/photo-1657947953120-6e5201f3b3ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHViZXJ8ZW58MHx8MHx8fDA%3D",
+        "images": [
+            "https://res.cloudinary.com/demo/image/upload/v1/uber/map.png",
+            "https://res.cloudinary.com/demo/image/upload/v2/uber/search.png",
+            "https://res.cloudinary.com/demo/image/upload/v3/uber/fare.png",
+            "https://res.cloudinary.com/demo/image/upload/v4/uber/ride-details.png",
+            "https://res.cloudinary.com/demo/image/upload/v5/uber/captain-view.png",
+            "https://res.cloudinary.com/demo/image/upload/v6/uber/profile.png",
+            "https://res.cloudinary.com/demo/image/upload/v7/uber/history.png"
+        ],
+        "description": "A sophisticated ride-hailing application that replicates the core functionality of Uber. It integrates real-time mapping, complex fare calculation algorithms, and a seamless matching system between captains and riders.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React",
+                "Tailwind CSS",
+                "Google Maps SDK"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Socket.io"
+            ],
+            "services": [
+                "Google Geocoding API",
+                "Directions API",
+                "JWT Auth"
+            ]
+        },
+        "tags": [
+            "React",
+            "Google Maps",
+            "Socket.io",
+            "Node.js"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/uber",
+            "live": ""
+        },
+        "ui_features": [
+            "Real-time vehicle movement simulation on maps",
+            "Floating search bars and predictive address input",
+            "Dynamic price estimation UI",
+            "Smooth mobile-first navigation flow"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/uber-clone/blob/main/README.md"
+        }
+    },
+    {
+        "id": "05",
+        "title": "Airbnb Rental Hub",
+        "category": "PropTech / Travel",
+        "type": "Marketplace Platform",
+        "icon": "Home",
+        "thumbnail": "https://images.unsplash.com/photo-1657256031855-68029292ff34?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlyYm5ifGVufDB8fDB8fHww",
+        "images": [
+            "https://res.cloudinary.com/demo/image/upload/v1/airbnb/home.png",
+            "https://res.cloudinary.com/demo/image/upload/v2/airbnb/search-results.png",
+            "https://res.cloudinary.com/demo/image/upload/v3/airbnb/property-detail.png",
+            "https://res.cloudinary.com/demo/image/upload/v4/airbnb/booking.png",
+            "https://res.cloudinary.com/demo/image/upload/v5/airbnb/host-dash.png",
+            "https://res.cloudinary.com/demo/image/upload/v6/airbnb/reviews.png",
+            "https://res.cloudinary.com/demo/image/upload/v7/airbnb/wishlist.png"
+        ],
+        "description": "Airbnb Clone is a comprehensive travel and hospitality marketplace. It enables users to discover unique stays, manage complex booking calendars, and provides hosts with a robust toolkit to manage their property listings.",
+        "role": "Full Stack Developer",
+        "tech": {
+            "frontend": [
+                "React",
+                "Tailwind CSS",
+                "React Router"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Mongoose"
+            ],
+            "services": [
+                "Cloudinary (Photography)",
+                "Stripe (Payments)",
+                "JWT"
+            ]
+        },
+        "tags": [
+            "React",
+            "Tailwind",
+            "Stripe",
+            "Node.js"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/Airbnb",
+            "live": ""
+        },
+        "ui_features": [
+            "Modern card layouts with multi-image carousels",
+            "Advanced filtering system for amenities and price",
+            "Interactive property location maps",
+            "Clean, minimalist design following Airbnb's design system"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/airbnb-clone/blob/main/README.md"
+        }
+    },
+    {
+        "id": "06",
+        "title": "Ademy - Knowledge E-Learning",
+        "category": "EdTech / E-Commerce",
+        "type": "Learning Platform",
+        "icon": "BookOpen",
+        "thumbnail": "https://images.unsplash.com/photo-1762329393667-03c6e5532174?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxlYXJuaW5nJTIwbWFuYWdlbWVudCUyMHN5c3RlbXxlbnwwfHwwfHx8MA%3D%3D",
+        "images": [
+            "https://res.cloudinary.com/demo/image/upload/v1/ademy/home.png",
+            "https://res.cloudinary.com/demo/image/upload/v2/ademy/courses.png",
+            "https://res.cloudinary.com/demo/image/upload/v3/ademy/player.png",
+            "https://res.cloudinary.com/demo/image/upload/v4/ademy/checkout.png",
+            "https://res.cloudinary.com/demo/image/upload/v5/ademy/instructor-dash.png",
+            "https://res.cloudinary.com/demo/image/upload/v6/ademy/progress.png",
+            "https://res.cloudinary.com/demo/image/upload/v7/ademy/certificates.png"
+        ],
+        "description": "Ademy is a premium e-learning marketplace that bridge the gap between instructors and students. It features a secure payment gateway for course purchases, a dedicated video player for lessons, and automated progress tracking.",
+        "role": "Lead Developer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS 4",
+                "Google OAuth"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js",
+                "MongoDB"
+            ],
+            "services": [
+                "Stripe (Payments)",
+                "Cloudinary (Video/Images)",
+                "Express Validator"
+            ]
+        },
+        "tags": [
+            "React",
+            "Stripe",
+            "OAuth",
+            "MongoDB"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/Ademy",
+            "live": ""
+        },
+        "ui_features": [
+            "Seamless course playback experience",
+            "Fluid checkout animations",
+            "Optimized course discovery interface",
+            "Professional instructor dashboards"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/ademy/blob/main/README.md"
+        }
+    },
+    {
+        "id": "07",
+        "title": "MiniURL - Link Analytics",
+        "category": "Utility / Microservice",
+        "type": "Web Utility Tool",
+        "icon": "Link",
+        "thumbnail": "https://media.istockphoto.com/id/598821796/photo/url-button-text.webp?a=1&b=1&s=612x612&w=0&k=20&c=QxpVe5cTwimheFp1jlEUa89HlUGc_Oasuas4NN4_le4=",
+        "images": [
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture_qftox8.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture6_pfbyqv.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783002/Capture7_ikxnts.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783000/Capture1_fz7slh.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture2_g4bkyi.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783000/Capture3_fd3qlk.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture5_gmhfix.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/v1770783001/Capture4_y4e7vd.png"
+        ],
+        "description": "A high-efficiency microservice designed for link management. It provides instant URL shortening, custom brand-able aliases, and real-time click tracking with QR code integration.",
+        "role": "Backend-focused Developer",
+        "tech": {
+            "frontend": [
+                "React",
+                "Tailwind CSS",
+                "Axios"
+            ],
+            "backend": [
+                "Node.js",
+                "Express.js",
+                "MongoDB"
+            ],
+            "services": [
+                "ShortID Generation",
+                "QR Code Engine"
+            ]
+        },
+        "tags": [
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "JavaScript"
+        ],
+        "techStack": [
+            "MERN Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/URL-Shortener",
+            "live": ""
+        },
+        "ui_features": [
+            "Ultra-minimalist input-first design",
+            "Instant copy-to-clipboard feedback",
+            "Modern simplified chart visualizations",
+            "Live preview for generated QR codes"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/miniurl/blob/main/README.md"
+        }
+    },
+    {
+        "id": "08",
+        "title": "The Rhythm Room",
+        "category": "Music / Events",
+        "type": "Web Application",
+        "icon": "Music",
+        "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1506152983158-2c8c9b1a7d3b?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A Next.js site for music courses, events, blogs and galleries. Built with a mobile-first responsive design and server-rendered pages for SEO.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js",
+                "React",
+                "Tailwind CSS",
+                "shadcn ui"
+            ],
+            "backend": [
+                "Next.js API Routes"
+            ],
+            "services": [
+                "Vercel (deployment)",
+                "JWT Auth (optional)"
+            ]
+        },
+        "techStack": [
+            "Next.js"
+        ],
+        "tags": [
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "shadcn ui"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/the-rhythm-room",
+            "live": "https://the-rhythm-room.vercel.app"
+        },
+        "ui_features": [
+            "Responsive hero and course listings",
+            "Event gallery with images",
+            "Static + dynamic Next.js pages",
+            "Mobile-first navigation flow"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/yourusername/the-rhythm-room/blob/main/README.md"
+        }
+    },
+    {
+        "id": "09",
+        "title": "Quizee",
+        "category": "EdTech / Learning",
+        "type": "Web Application",
+        "icon": "GraduationCap",
+        "thumbnail": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "An interactive flashcard and study application inspired by Quizlet. Built with React and Vite, Quizee helps students master any subject through beautifully designed flashcards, dynamic carousels, and an intuitive learning experience.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "React Router"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "Vercel (deployment)",
+                "FontAwesome Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "React Router",
+            "FontAwesome",
+            "Education",
+            "Flashcards"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/quieee",
+            "live": "https://quizcart.vercel.app/"
+        },
+        "ui_features": [
+            "Interactive flashcard browsing system",
+            "Dynamic carousel for featured topics",
+            "Responsive mobile-first design",
+            "Pagination for large study sets",
+            "Smooth animations and transitions",
+            "Study sets across multiple subjects (Languages, Science, History)"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/mabdullah356/quieee/README.md"
+        }
+    },
+    {
+        "id": "10",
+        "title": "Pookie Games",
+        "category": "Gaming / Entertainment",
+        "type": "Web Application",
+        "icon": "Gamepad",
+        "thumbnail": "https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?w=600&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A modern, high-performance mini-games hub featuring a collection of classic arcade and logic games. Starting with a sleek Tic-Tac-Toe implementation, Pookie Games focuses on smooth state management, responsive bento-grid layouts, and a seamless user experience.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite 7",
+                "Tailwind CSS v4",
+                "React Router"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "Vercel (deployment)",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Gamin",
+            "Bento Grid",
+            "Logic Games",
+            "Web Portals"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/pookie-games",
+            "live": "https://pookie-games.vercel.app/"
+        },
+        "ui_features": [
+            "Interactive Bento-style dashboard",
+            "Dynamic game loading system via JSON configuration",
+            "Responsive grid layout (Col-span 2 for featured games)",
+            "Smooth page transitions with React Router",
+            "Hover-responsive game cards with dynamic overlays",
+            "Fully optimized for mobile and desktop gameplay"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/mabdullah356/pookie-games/blob/main/README.md"
+        }
+    },
+    {
+        "id": "11",
+        "title": "shopyee",
+        "category": "E-commerce / Lifestyle",
+        "type": "Web Application",
+        "icon": "ShoppingBag",
+        "thumbnail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A sophisticated platform merging a modern fashion e-commerce experience with curated travel and lifestyle guides. shopyee provides a seamless transition from exploring the latest trends in Men’s, Women’s, and Junior’s apparel to discovering hand-picked global travel destinations through an editorial-style interface.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite 8",
+                "Tailwind CSS v4",
+                "React Router 7"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "REST Countries API",
+                "Local JSON Data Engine",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "E-commerce",
+            "Travel Guides",
+            "Lifestyle",
+            "Responsive Style"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/shopyee",
+            "live": "https://shopyee-six.vercel.app/"
+        },
+        "ui_features": [
+            "Dynamic Category-driven Navigation System",
+            "Curated Editorial Travel Experiences",
+            "Real-time Country Data Integration via REST API",
+            "Modern Tailwind CSS v4 Fluid Design Language",
+            "Responsive Product and Discovery Grids",
+            "Seamless Page Transitions with React Router 7"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/mabdullah356/easy-shop/blob/main/README.md"
+        }
+    },
+    {
+        "id": "13",
+        "title": "Inventory-MS",
+        "category": "Management / Productivity",
+        "type": "Web Application",
+        "icon": "Package",
+        "thumbnail": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1553413766-47583c4531d0?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A professional-grade Inventory Management System engineered for seamless stock tracking and business efficiency. InventoryMS features a high-performance dashboard, full product and category life-cycle management, and an advanced historical transaction engine, all delivered through a premium enterprise-level interface with zero backend dependency.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 18",
+                "Vite",
+                "Tailwind CSS v4",
+                "React Router 6"
+            ],
+            "backend": [
+                "Static (Client-side only)"
+            ],
+            "services": [
+                "LocalStorage Persistence Engine",
+                "Custom CSV Export Utility",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Inventory Management",
+            "Admin Dashboard",
+            "Local Persistence",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/inventory-management-system",
+            "live": ""
+        },
+        "ui_features": [
+            "Enterprise-grade Dashboard with Real-time Metrics",
+            "Advanced Product CRUD with Category Relationships",
+            "Sophisticated Manual Stock Adjustment Module",
+            "Comprehensive Transaction Logging & Filtering System",
+            "Premium Slate-themed Sidebar Navigation",
+            "Built-in System Reset and Local Data Clearing"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/mabdullah356/inventory-management-system/blob/main/README.md"
+        }
+    },
+    {
+        "id": "14",
+        "title": "Dribbble-Clone",
+        "category": "Design / Social Media",
+        "type": "Web Application",
+        "icon": "Grid",
+        "thumbnail": "https://plus.unsplash.com/premium_photo-1706259481452-f857c96ceaca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvamVjdCUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
+        "images": [
+            "https://plus.unsplash.com/premium_photo-1663040543387-cb7c78c4f012?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvamVjdCUyMG1hbmFnZW1lbnQlMjBzb2Z0d2FyZXxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A high-fidelity, full-stack Dribbble clone engineered for designers and creatives to showcase their work in a premium ecosystem. Built with Next.js 15+ and Tailwind CSS 4, it features a high-performance grid layout, secure authentication via NextAuth, and seamless media handling through Cloudinary. The application provides a state-of-the-art user experience with responsive design, real-time image processing, and a robust project management system.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js 15 (App Router)",
+                "React 19",
+                "Tailwind CSS v4",
+                "Axios"
+            ],
+            "backend": [
+                "Next.js Route Handlers",
+                "MongoDB",
+                "Mongoose",
+                "NextAuth.js"
+            ],
+            "services": [
+                "Cloudinary Media Engine",
+                "Nodemailer (Account Verification)",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "Next.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ],
+        "tags": [
+            "Next.js",
+            "Tailwind CSS",
+            "MongoDB",
+            "NextAuth",
+            "Cloudinary",
+            "Social Media Clone",
+            "Full Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/dribbble",
+            "live": "https://dribbble-amber.vercel.app/"
+        },
+        "ui_features": [
+            "High-Performance Design Grid with Premium Hover States",
+            "Dynamic Interaction Engine (Like, Save, View Count Tracking)",
+            "Advanced Search Architecture with Popular Tag Suggestions",
+            "Secure Multi-factor Authentication & Email Verification",
+            "Sophisticated Project Upload & Management Module",
+            "Personalized Creative Profiles with Level-based Badging",
+            "Responsive Dark-Themed Glassmorphism Interface"
+        ],
+        "online_resources": {
+            "documentation": "https://github.com/mabdullah356/dribbble/blob/main/README.md"
+        }
+    },
+    {
+        "id": "15",
+        "title": "GitLens",
+        "category": "Developer Tools / Analytics",
+        "type": "Web Application",
+        "icon": "Github",
+        "thumbnail": "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2l0aHVifGVufDB8fDB8fHww",
+        "images": [
+            "https://res.cloudinary.com/dujmr03is/image/upload/q_auto/f_auto/v1776253824/Capture_kiclkj.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/q_auto/f_auto/v1776253825/Capture1_odhbtm.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/q_auto/f_auto/v1776253825/Capture2_hezm0s.png",
+            "https://res.cloudinary.com/dujmr03is/image/upload/q_auto/f_auto/v1776253825/Capture4_qnw3fj.png"
+        ],
+        "description": "A high-performance GitHub profile visualizer and analyzer designed to give developers deep insights into open-source contributions. GitLens features real-time profile fetching, smart repository analytics, activity level tracking, and an interactive contribution heat-map, all delivered via a clean, modern interface.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS v4",
+                "React Router 7"
+            ],
+            "backend": [
+                "GitHub REST API"
+            ],
+            "services": [
+                "Axios for Data Fetching",
+                "React Icons",
+                "Custom Smart Insights Engine"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "GitHub API",
+            "Data Visualization",
+            "Developer Tools",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/GitLens",
+            "live": "https://git-lens-tan.vercel.app/"
+        },
+        "ui_features": [
+            "Dynamic GitHub Profile Search Interface",
+            "Smart Insights Module (Language, Stars & Activity)",
+            "Interactive Contribution Heat-map Visualization",
+            "Comprehensive Repository List with Metadata",
+            "Real-time Statistic Cards (Followers, Following, Repos)",
+            "Premium Minimalist UI with Slate & Blue Accents"
+        ]
+    },
+    {
+        "id": "16",
+        "title": "EChat",
+        "category": "Communication / AI Chat",
+        "type": "Web Application",
+        "icon": "MessageSquare",
+        "thumbnail": "https://plus.unsplash.com/premium_photo-1677094310919-d0361465d3be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hhdGJvdCUyMGFpfGVufDB8fDB8fHww",
+        "images": [
+            "https://media.istockphoto.com/id/2226083558/photo/human-interaction-with-ai-technology-via-mobile.webp?a=1&b=1&s=612x612&w=0&k=20&c=iA5wlrKdGo4Crp7ScZAU0arN_3tCUjdLlQp297X0ODk=",
+            "https://media.istockphoto.com/id/2223894979/photo/ai-agents-and-assistants-man-using-a-laptop-with-futuristic-software-for-generating-images.webp?a=1&b=1&s=612x612&w=0&k=20&c=y2HdcLz-EHBl9Xv67fhqkHA6ITfq4DdSKRaEIGUDlgE="
+        ],
+        "description": "EChat is a premium, high-performance AI-powered chat application designed to provide a seamless conversational experience. Built with React 19 and Vite, it integrates the Google Gemini Flash API for intelligent real-time responses. The platform features secure Clerk authentication, dynamic message streaming, and a mobile-first responsive design, all wrapped in a sleek, minimalist UI.",
+        "role": "Lead Full Stack Developer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS v4",
+                "React Router 7"
+            ],
+            "backend": [
+                "Google Gemini API",
+                "Clerk Authentication"
+            ],
+            "services": [
+                "Axios for Data Fetching",
+                "React Icons",
+                "Lucide React"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "AI Chat",
+            "Gemini API",
+            "Clerk Auth",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/EChat",
+            "live": ""
+        },
+        "ui_features": [
+            "Clean AI Chat Interface with Instant Semantic Responses",
+            "Robust User Authentication & Profile Management via Clerk",
+            "Dynamic Typing Indicators & Real-time Message Rendering",
+            "Context-Aware Conversation History & New Chat Logic",
+            "Mobile-First Responsive Layout with Optimized Layout Shift",
+            "Premium Minimalist Aesthetic with Zinc & Slate Accents"
+        ]
+    },
+    {
+        "id": "17",
+        "title": "Guardly",
+        "category": "Security / Productivity",
+        "type": "Web Application",
+        "icon": "Shield",
+        "thumbnail": "https://images.unsplash.com/photo-1762340275855-ae8f4c2c144e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGFzc3dvcmQlMjBtYW5hZ2VyfGVufDB8fDB8fHww",
+        "images": [
+            "https://images.unsplash.com/photo-1762340275855-ae8f4c2c144e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGFzc3dvcmQlMjBtYW5hZ2VyfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1762330472502-83efbe1d4478?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhc3N3b3JkJTIwbWFuYWdlcnxlbnwwfHwwfHx8MA%3D%3D"
+        ],
+        "description": "A high-performance, military-grade password management solution designed for ultimate security and ease of use. Guardly features a zero-knowledge architecture, smart autofill capabilities, and a sleek modern interface to securely manage both digital credentials and financial wallets across all devices.",
+        "role": "Frontend Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS v4",
+                "Framer Motion"
+            ],
+            "backend": [
+                "React Context API",
+                "Browser LocalStorage"
+            ],
+            "services": [
+                "React Icons",
+                "Custom Security Hooks",
+                "Encryption Workflow Logic"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Security",
+            "Password Manager",
+            "Productivity",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/password-manager",
+            "live": "https://guardlyyy.vercel.app/"
+        },
+        "ui_features": [
+            "Interactive Dashboard with Motion-enhanced Transitions",
+            "Secure Credentials Vault with Real-time CRUD Operations",
+            "Stored Wallets Module for Credit Card Management",
+            "Zero-Knowledge Architecture UI Visualization",
+            "Responsive Grid Layout with High-Fidelity Iconography",
+            "Premium Minimalist UI with Slate, Blue & Green Accents"
+        ]
+    },
+    {
+        "id": "18",
+        "title": "SonicStream",
+        "category": "Entertainment / Streaming",
+        "type": "Web Application",
+        "icon": "Music",
+        "thumbnail": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=1200&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A high-performance music streaming platform inspired by Spotify. SonicStream leverages the Spotify Web API to deliver real-time track searches, seamless playback, and personalized playlist management within a stunning, glassmorphic interface designed for both desktop and mobile users.",
+        "role": "Full Stack Developer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS v4",
+                "Framer Motion"
+            ],
+            "backend": [
+                "Spotify Web API",
+                "React Context API",
+                "OAuth 2.0"
+            ],
+            "services": [
+                "React Icons",
+                "Lucide React",
+                "Axios / Fetch API"
+            ]
+        },
+        "techStack": [
+            "React"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Spotify API",
+            "Entertainment",
+            "Streaming",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/spotify",
+            "live": ""
+        },
+        "ui_features": [
+            "Real-time Music Playback with Interactive Seek Bar",
+            "Dynamic Search Engine for Artists, Albums, and Tracks",
+            "Glassmorphic Dashboard with Fluid Motion Transitions",
+            "Personalized Library and Playlist Management System",
+            "Responsive Grid Layout for Seamless Cross-Device Experience",
+            "Premium UI with Deep Obsidian, Emerald, and Slate Accents"
+        ]
+    },
+    {
+        "id": "19",
+        "title": "BookSphere",
+        "category": "E-commerce / Digital Library",
+        "type": "Web Application",
+        "icon": "Book",
+        "thumbnail": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A feature-rich digital bookstore and library management platform designed for a seamless reading discovery experience. BookSphere features dynamic book sliders, real-time catalog management via Supabase, advanced category filtering, and a responsive shopping interface, all brought to life with smooth Framer Motion animations.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "React 19",
+                "Vite",
+                "Tailwind CSS v4",
+                "React Router 7",
+                "Framer Motion"
+            ],
+            "backend": [
+                "Supabase (PostgreSQL & Auth)"
+            ],
+            "services": [
+                "Axios for Data Fetching",
+                "React Icons",
+                "Vercel Deployment"
+            ]
+        },
+        "techStack": [
+            "React",
+            "Supabase",
+            "Tailwind"
+        ],
+        "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Supabase",
+            "E-commerce",
+            "Framer Motion",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/BookSphere",
+            "live": "https://book-sphere-seven.vercel.app/"
+        },
+        "ui_features": [
+            "Dynamic Book Discovery Slider & Hero Sections",
+            "Real-time Database Integration for Catalog & Inventory",
+            "Advanced Product Filtering & Shop Interface",
+            "Interactive Book Details with Metadata Showcasing",
+            "Comprehensive User Authentication System (Login/SignUp)",
+            "Premium Minimalist UI with Elegant Typography & Transitions"
+        ]
+    },
+    {
+        "id": "20",
+        "title": "Instagram-Lite",
+        "category": "Social Media / Connect",
+        "type": "Web Application",
+        "icon": "Instagram",
+        "thumbnail": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtfGVufDB8fDB8fHww",
+        "images": [
+            "https://images.unsplash.com/photo-1595039838779-f3780873afdd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW5zdGFncmFtfGVufDB8fDB8fHww",
+            "https://plus.unsplash.com/premium_photo-1683842189051-19fc4188df7d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluc3RhZ3JhbXxlbnwwfHwwfHx8MA%3D%3D"
+        ],
+        "description": "A high-performance, pixel-perfect Instagram replication engineered for seamless social interaction. Built with Next.js 16 and Tailwind CSS 4, it features a responsive glassmorphic UI, secure authentication via NextAuth, and a scalable MongoDB backend. The application delivers a premium user experience with real-time post interactions, dynamic route grouping, and sophisticated server-side rendering for optimal performance.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js 16 (App Router)",
+                "React 19",
+                "Tailwind CSS v4",
+                "Axios"
+            ],
+            "backend": [
+                "Next.js Server Actions",
+                "MongoDB",
+                "Mongoose",
+                "NextAuth.js"
+            ],
+            "services": [
+                "Cloudinary Media Engine",
+                "Bcrypt.js (Security)",
+                "React Icons"
+            ]
+        },
+        "techStack": [
+            "Next.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ],
+        "tags": [
+            "Next.js",
+            "Tailwind CSS",
+            "MongoDB",
+            "NextAuth",
+            "Social Media Clone",
+            "Full Stack",
+            "Responsive Design"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/instagram-lite",
+            "live": ""
+        },
+        "ui_features": [
+            "Pixel-Perfect Instagram UI with Modern Glassmorphism",
+            "Secure Authentication Flow with Route Protection",
+            "Dynamic Feed Architecture with Optimized Layout Shifting",
+            "Seamless Post Interactions (Like, Comment, Save functionality)",
+            "Advanced User Profiles with Follower/Following Logic",
+            "High-Performance Server Actions for Real-time Data Handling",
+            "Responsive Navigation System (Sidebar & Bottom Bar)"
+        ]
+    },
+    {
+        "id": "21",
+        "title": "Aventine OS - macOS Portfolio",
+        "category": "Interactive Experience / Portfolio",
+        "type": "Next.js Web Application",
+        "icon": "Monitor",
+        "thumbnail": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&auto=format&fit=crop&q=60",
+        "images": [
+            "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A premium, high-performance macOS-inspired portfolio engineered to replicate a full desktop environment within the browser. Built with Next.js 16 and Tailwind CSS 4, it features a robust custom window management system, a dynamic dock with magnification effects, and an integrated wallpaper engine. The application delivers a pixel-perfect Apple-style UI with fluid Framer Motion animations and intelligent responsive adaptation, transitioning seamlessly from a multi-window desktop OS to a simplified iOS-like mobile interface.",
+        "role": "Lead Frontend Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js 16 (App Router)",
+                "React 19",
+                "Tailwind CSS v4",
+                "Framer Motion",
+                "react-rnd (Window Logic)",
+                "shadcn/ui"
+            ],
+            "backend": [
+                "Next.js Server Actions",
+                "LocalStorage Persistence Engine",
+                "Custom Window Management Hook"
+            ],
+            "services": [
+                "Lucide React Icons",
+                "Vercel Deployment",
+                "React Icons (Socials)"
+            ]
+        },
+        "techStack": [
+            "Next.js",
+            "Tailwind CSS",
+            "Framer Motion"
+        ],
+        "tags": [
+            "Next.js",
+            "Tailwind CSS v4",
+            "Framer Motion",
+            "macOS Clone",
+            "Portfolio OS",
+            "Interactive UI",
+            "Full Stack"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/mabdullah",
+            "live": "https://mabdullah-portfolio-me.vercel.app/"
+        },
+        "ui_features": [
+            "Pixel-Perfect macOS Desktop UI with Sophisticated Glassmorphism",
+            "Dynamic Dock System with Intelligent Icon Magnification Effects",
+            "Robust Window Manager with Drag, Resize, Focus, and Fullscreen Logic",
+            "Authentic Apple-Style Boot Sequence and Fluid System Animations",
+            "Integrated Wallpaper Engine for Real-Time UI Customization",
+            "Adaptive Design Language (Full-OS Desktop to iOS-styled Mobile UI)",
+            "Suite of Interactive Apps (About, Projects, Resume, Services, Settings)"
+        ]
+    },
+    {
+        "id": "22",
+        "title": "Trimly - Smart URL Shortener",
+        "category": "Productivity / Web Tool",
+        "type": "Next.js Web Application",
+        "icon": "Link",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lTWecGZ2SJb1beaZJU-g9tFw-hHmTBZDjQ&s",
+        "images": [
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=60"
+        ],
+        "description": "A high-performance URL shortener and comprehensive analytics platform engineered for speed and deep visitor insights. Built with Next.js 16 and Tailwind CSS 4, it features instant link shortening, secure multi-factor authentication, and an advanced tracking engine that captures detailed geolocation, device specifications, and browser data. The application provides a seamless, emerald-themed administration dashboard for managing shortened links with real-time data persistence through MongoDB.",
+        "role": "Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js 16 (App Router)",
+                "React 19",
+                "Tailwind CSS v4",
+                "Axios",
+                "Framer Motion"
+            ],
+            "backend": [
+                "Next.js Route Handlers",
+                "MongoDB",
+                "Mongoose",
+                "NextAuth.js",
+                "nanoid"
+            ],
+            "services": [
+                "Nodemailer (Verification)",
+                "ua-parser-js (Analytics)",
+                "ipinfo.io API",
+                "Vercel Deployment"
+            ]
+        },
+        "techStack": [
+            "Next.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ],
+        "tags": [
+            "Next.js",
+            "Tailwind CSS v4",
+            "MongoDB",
+            "URL Shortener",
+            "Analytics",
+            "Full Stack",
+            "NextAuth"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/trimly",
+            "live": "https://trimly-gold.vercel.app/"
+        },
+        "ui_features": [
+            "One-Click High-Performance URL Shortening System",
+            "Advanced Visitor Analytics Dashboard (Geo, Device, Browser Tracking)",
+            "Secure Multi-Factor Authentication with Email Verification",
+            "Real-Time Link Management & Interaction History Persistence",
+            "High-Fidelity Responsive Emerald Design System",
+            "Intelligent Bot Detection & Security Filtering Logic",
+            "Sophisticated Geolocation Integration via ipinfo.io"
+        ]
+    },
+    {
+        "id": "23",
+        "title": "SmartBank",
+        "category": "Fintech / Banking",
+        "type": "Web Application",
+        "icon": "Wallet",
+        "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFua2luZyUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D",
+        "images": [
+            "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmluYW5jZSUyMGRhc2hib2FyZHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGVybiUyMGJhbmtpbmd8ZW58MHx8MHx8fDA%3D"
+        ],
+        "description": "A sophisticated full-stack online banking ecosystem engineered for secure and seamless financial management. Built with Next.js 16 and Tailwind CSS 4, it features a dual-entry ledger system, real-time transaction processing, and a robust security architecture including OTP verification and account lockout protection. The platform empowers users with intuitive money transfers and loan applications while providing administrators with comprehensive analytical oversight.",
+        "role": "Lead Full Stack Engineer",
+        "tech": {
+            "frontend": [
+                "Next.js 16 (App Router)",
+                "React 19",
+                "Tailwind CSS v4",
+                "Shadcn/UI",
+                "Axios"
+            ],
+            "backend": [
+                "Next.js API Routes",
+                "MongoDB",
+                "Mongoose",
+                "NextAuth.js (JWT Strategy)"
+            ],
+            "services": [
+                "Nodemailer (SMTP Engine)",
+                "Bcrypt.js (Security)",
+                "Lucide React Icons",
+                "MongoDB Transactions"
+            ]
+        },
+        "techStack": [
+            "Next.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ],
+        "tags": [
+            "Next.js",
+            "Tailwind CSS",
+            "MongoDB",
+            "NextAuth",
+            "Fintech",
+            "Full Stack",
+            "Responsive Design",
+            "Security"
+        ],
+        "links": {
+            "github": "https://github.com/mabdullah356/smartbank",
+            "live": "https://smartbank-kappa.vercel.app/"
+        },
+        "ui_features": [
+            "Dynamic Banking Dashboard with Real-time Balance Tracking",
+            "Secure Money Transfer System with Email Notifications & Idempotency",
+            "Multi-step Authentication with OTP Verification & Account Lockout",
+            "Comprehensive Loan Lifecycle (Request, Admin Approval, Repayment)",
+            "Advanced Admin Suite for User Monitoring and Platform Oversight",
+            "Modern Glassmorphic UI with Dark/Light Mode Persistence",
+            "High-Performance Dual-Entry Ledger for Transactional Integrity"
+        ]
+    }
+]
